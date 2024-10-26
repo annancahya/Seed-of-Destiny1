@@ -1,0 +1,385 @@
+fileFormatVersion: 2
+guid: af84153ad0874084ca2b26f1e255a57d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite-ArdhanaArtboard-2_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 77
+        width: 287
+        height: 640
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e66bea8f2a6f994f8adb7288dca13e6
+      internalID: -17937143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-ArdhanaArtboard-2_1
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 75
+        width: 284
+        height: 646
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0c7a62ea1f0cf4db3a58b30c432b48
+      internalID: -1110501605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-ArdhanaArtboard-2_3
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 71
+        width: 252
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd05ee490ea51a478f5fde324dde20a
+      internalID: -119698075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-ArdhanaArtboard-2_5
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 71
+        width: 283
+        height: 651
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cfeb144fd86e244be4cf087c7572c1
+      internalID: 1031007553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-ArdhanaArtboard-2_7
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 73
+        width: 251
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d63cb04fae4d74cb9a76bac94a8094
+      internalID: -1183021838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-ArdhanaArtboard-2_9
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 77
+        width: 284
+        height: 649
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621bd49c050b0434fbe5075254b07166
+      internalID: 801469056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-ArdhanaArtboard-2_11
+      rect:
+        serializedVersion: 2
+        x: 2451
+        y: 73
+        width: 287
+        height: 653
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd2e256e558d7642b8e3bdca13b31c3
+      internalID: 286276721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-ArdhanaArtboard-2_13
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 78
+        width: 249
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796b5ffa2cbb723448b99169a99339ff
+      internalID: 935115399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sprite-ArdhanaArtboard-2_0: -17937143
+      Sprite-ArdhanaArtboard-2_1: -1110501605
+      Sprite-ArdhanaArtboard-2_10: -926040944
+      Sprite-ArdhanaArtboard-2_11: 286276721
+      Sprite-ArdhanaArtboard-2_12: -1048065720
+      Sprite-ArdhanaArtboard-2_13: 935115399
+      Sprite-ArdhanaArtboard-2_14: -2079834002
+      Sprite-ArdhanaArtboard-2_15: -1126687256
+      Sprite-ArdhanaArtboard-2_16: -454082817
+      Sprite-ArdhanaArtboard-2_17: -1158527534
+      Sprite-ArdhanaArtboard-2_18: -1185965835
+      Sprite-ArdhanaArtboard-2_19: 994905519
+      Sprite-ArdhanaArtboard-2_2: -350817285
+      Sprite-ArdhanaArtboard-2_20: 649583848
+      Sprite-ArdhanaArtboard-2_21: -1544257741
+      Sprite-ArdhanaArtboard-2_22: -1509244357
+      Sprite-ArdhanaArtboard-2_23: -962593383
+      Sprite-ArdhanaArtboard-2_24: -1512484245
+      Sprite-ArdhanaArtboard-2_25: 2105253857
+      Sprite-ArdhanaArtboard-2_26: 1632702912
+      Sprite-ArdhanaArtboard-2_27: -591744922
+      Sprite-ArdhanaArtboard-2_28: -1791078288
+      Sprite-ArdhanaArtboard-2_29: 709449220
+      Sprite-ArdhanaArtboard-2_3: -119698075
+      Sprite-ArdhanaArtboard-2_30: 213675446
+      Sprite-ArdhanaArtboard-2_31: -1541513775
+      Sprite-ArdhanaArtboard-2_32: -482974801
+      Sprite-ArdhanaArtboard-2_33: 1896591988
+      Sprite-ArdhanaArtboard-2_34: -1724983983
+      Sprite-ArdhanaArtboard-2_35: 958484140
+      Sprite-ArdhanaArtboard-2_36: 1061820931
+      Sprite-ArdhanaArtboard-2_37: -941827145
+      Sprite-ArdhanaArtboard-2_38: 323389907
+      Sprite-ArdhanaArtboard-2_39: -1723420258
+      Sprite-ArdhanaArtboard-2_4: -178390557
+      Sprite-ArdhanaArtboard-2_40: -576212624
+      Sprite-ArdhanaArtboard-2_41: 1347810244
+      Sprite-ArdhanaArtboard-2_42: -80059343
+      Sprite-ArdhanaArtboard-2_43: 666880923
+      Sprite-ArdhanaArtboard-2_44: -1198033269
+      Sprite-ArdhanaArtboard-2_45: 1039980418
+      Sprite-ArdhanaArtboard-2_46: -1921111774
+      Sprite-ArdhanaArtboard-2_47: -1005127731
+      Sprite-ArdhanaArtboard-2_48: -2057800902
+      Sprite-ArdhanaArtboard-2_49: -1885769683
+      Sprite-ArdhanaArtboard-2_5: 1031007553
+      Sprite-ArdhanaArtboard-2_50: 1329009860
+      Sprite-ArdhanaArtboard-2_51: 108133346
+      Sprite-ArdhanaArtboard-2_52: 850476450
+      Sprite-ArdhanaArtboard-2_53: 1194037768
+      Sprite-ArdhanaArtboard-2_54: -1312575051
+      Sprite-ArdhanaArtboard-2_55: -95977306
+      Sprite-ArdhanaArtboard-2_56: -1667903063
+      Sprite-ArdhanaArtboard-2_57: 2112406296
+      Sprite-ArdhanaArtboard-2_58: 1191412414
+      Sprite-ArdhanaArtboard-2_59: 1079733643
+      Sprite-ArdhanaArtboard-2_6: 298382071
+      Sprite-ArdhanaArtboard-2_60: 502655370
+      Sprite-ArdhanaArtboard-2_61: 446668770
+      Sprite-ArdhanaArtboard-2_62: 2084788689
+      Sprite-ArdhanaArtboard-2_63: -729157835
+      Sprite-ArdhanaArtboard-2_64: 43019300
+      Sprite-ArdhanaArtboard-2_65: 1659867759
+      Sprite-ArdhanaArtboard-2_66: -842710218
+      Sprite-ArdhanaArtboard-2_67: -730884169
+      Sprite-ArdhanaArtboard-2_68: 607102425
+      Sprite-ArdhanaArtboard-2_69: 183214182
+      Sprite-ArdhanaArtboard-2_7: -1183021838
+      Sprite-ArdhanaArtboard-2_70: -151006072
+      Sprite-ArdhanaArtboard-2_71: 1034689856
+      Sprite-ArdhanaArtboard-2_72: -699799823
+      Sprite-ArdhanaArtboard-2_73: 1727044594
+      Sprite-ArdhanaArtboard-2_74: -572111959
+      Sprite-ArdhanaArtboard-2_75: -886282932
+      Sprite-ArdhanaArtboard-2_76: -32958240
+      Sprite-ArdhanaArtboard-2_8: 28589227
+      Sprite-ArdhanaArtboard-2_9: 801469056
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
