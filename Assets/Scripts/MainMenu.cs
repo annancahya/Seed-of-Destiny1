@@ -8,6 +8,6 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("Level1");
+        SceneManager.LoadScene("CutScene", LoadSceneMode.Single);
     }
 }
