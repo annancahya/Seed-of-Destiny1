@@ -27,6 +27,7 @@ public class NPCInteraction : MonoBehaviour
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
             ShowDialogue();
+            interactionUI.SetActive(false); // Sembunyikan "Tekan E" saat dialog muncul
         }
     }
 
@@ -45,7 +46,7 @@ public class NPCInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isPlayerInRange = true;
+            isPlayerInRange = true; 
             interactionUI.SetActive(true); // Tampilkan teks "Tekan E"
         }
     }
