@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] float speed;
     [SerializeField] float jumpPower;
+    [SerializeField] private int extraJumps;
+    private int jumpCounter;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
@@ -38,17 +40,28 @@ public class PlayerMovement : MonoBehaviour
         // Movement logic
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
+        if (isGrounded())
+        {
+            jumpCounter = 0;
+        }
+
         // Jump logic
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             Jump();
     }
 
     private void Jump()
     {
-        if (isGrounded())
+        if (isGrounded() || jumpCounter < extraJumps)
         {
             body.velocity = new Vector2(body.velocity.x, jumpPower);
             anim.SetTrigger("Jump");
+
+            // Increment jump counter if not grounded
+            if (!isGrounded())
+            {
+                jumpCounter++; // Increment for additional jump
+            }
         }
     }
 
