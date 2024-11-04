@@ -3,15 +3,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private CheckpointManager checkpointManager;
-
+    private GameOverManager gameOverManager;
     public int maxHealth = 2;
     public int maxLives = 3;
 
-[SerializeField] private int currentHealth;
-    private int currentLives;
+    [SerializeField] private int currentHealth;
+    [SerializeField] private int currentLives;
 
     private void Start()
     {
+        gameOverManager = FindObjectOfType<GameOverManager>();
         checkpointManager = FindObjectOfType<CheckpointManager>();
         ResetHealth();
         currentLives = maxLives; // 
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("Game Over");
+        gameOverManager.ShowGameOver(); 
     }
 
     private void TakeDamage(int damage)
