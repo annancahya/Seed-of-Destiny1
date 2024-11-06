@@ -1,9 +1,8 @@
-using Microsoft.Unity.VisualStudio.Editor;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using Image = UnityEngine.UI.Image;
 
-public class PlayerController : MonoBehaviour
+public class HealthManager : MonoBehaviour
 {
     private CheckpointManager checkpointManager;
     private GameOverManager gameOverManager;
@@ -16,15 +15,16 @@ public class PlayerController : MonoBehaviour
 
     private int currentHealth;
     private int currentLives;
-
-
+    private SpriteRenderer spriteRenderer;
+    public bool isDead = false;
 
     private void Start()
     {
         gameOverManager = FindObjectOfType<GameOverManager>();
         checkpointManager = FindObjectOfType<CheckpointManager>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         ResetHealth();
-        currentLives = maxLives; // 
+        currentLives = maxLives;
     }
 
     private void ResetHealth()
@@ -37,14 +37,26 @@ public class PlayerController : MonoBehaviour
         if (currentLives > 1)
         {
             currentLives--;
-            transform.position = checkpointManager.GetRespawnPoint();
-            ResetHealth();
-            Debug.Log("Respawning... Lives left: " + currentLives);
+            StartCoroutine(RespawnWithDelay(1f));
         }
         else
         {
             GameOver();
         }
+    }
+
+    private IEnumerator RespawnWithDelay(float delay)
+    {
+        spriteRenderer.enabled = false;
+        isDead = true;
+
+        yield return new WaitForSeconds(delay);
+
+        transform.position = checkpointManager.GetRespawnPoint();
+        ResetHealth();
+        spriteRenderer.enabled = true;
+        isDead = false;
+        Debug.Log("Respawning... Lives left: " + currentLives);
     }
 
     private void GameOver()
@@ -73,10 +85,6 @@ public class PlayerController : MonoBehaviour
         {
             TakeDamage(2);
         }
-        // else if (other.CompareTag("Obstacle"))
-        // {
-        //     TakeDamage(50);
-        // }
     }
 
     private void Update()
@@ -94,6 +102,5 @@ public class PlayerController : MonoBehaviour
         {
             hearts[i].sprite = fullHeart;
         }
-
     }
 }

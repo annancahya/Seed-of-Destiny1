@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
+    private HealthManager healthManager;
     private float horizontalInput;
 
     AudioManager audioManager;
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        //Grab references for rigidbody and animator from my game object
+        healthManager = GetComponent<HealthManager>();
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -29,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (healthManager.isDead)
+        {
+            return; // Skip the rest of the update if the player is dead
+        }
+
         horizontalInput = Input.GetAxis("Horizontal");
 
         // Flip player when moving right & left
