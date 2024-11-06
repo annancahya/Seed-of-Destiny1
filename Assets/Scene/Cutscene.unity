@@ -156,6 +156,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -4291619654505783389, guid: c378a2d8f9b77aa42895ea2dac152802, type: 2}
     value: {fileID: 1484856399}
+  - key: {fileID: 7293985972826435801, guid: c378a2d8f9b77aa42895ea2dac152802, type: 2}
+    value: {fileID: 1057696387}
   m_ExposedReferences:
     m_References:
     - 371dbc9ed8ccb2347a0cbe386820ac31: {fileID: 1484856399}
@@ -310,7 +312,7 @@ GameObject:
   - component: {fileID: 1057696388}
   - component: {fileID: 1057696387}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: skip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,8 +387,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
