@@ -12,12 +12,16 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float horizontalInput;
 
+    AudioManager audioManager;
+
+
     private void Awake()
     {
         //Grab references for rigidbody and animator from my game object
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 
         // Prevent rotation from physics
         body.freezeRotation = true;
@@ -56,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         {
             body.velocity = new Vector2(body.velocity.x, jumpPower);
             anim.SetTrigger("Jump");
+            audioManager.PlaySFX(audioManager.jump);
 
             // Increment jump counter if not grounded
             if (!isGrounded())
@@ -70,4 +75,11 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
+
+    public void PlayStep()
+    {
+        audioManager.PlaySFX(audioManager.steps);
+
+    }
+
 }

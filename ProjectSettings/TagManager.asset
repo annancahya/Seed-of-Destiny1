@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Hazard
+  - platform
+  - Audio
   layers:
   - Default
   - TransparentFX
