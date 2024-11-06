@@ -3,6 +3,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     AudioManager audioManager;
+    private bool isActivated = false;
 
     private void Awake()
     {
@@ -10,8 +11,9 @@ public class Checkpoint : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isActivated)
         {
+            isActivated = true;
             CheckpointManager manager = FindObjectOfType<CheckpointManager>();
             manager.SetCheckpoint(transform);
             audioManager.PlaySFX(audioManager.checkpoint);

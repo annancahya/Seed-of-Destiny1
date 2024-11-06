@@ -1,4 +1,7 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,8 +10,14 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 2;
     public int maxLives = 3;
 
-    [SerializeField] private int currentHealth;
-    [SerializeField] private int currentLives;
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
+
+    private int currentHealth;
+    private int currentLives;
+
+
 
     private void Start()
     {
@@ -25,11 +34,11 @@ public class PlayerController : MonoBehaviour
 
     public void Respawn()
     {
-        if (currentLives > 0)
+        if (currentLives > 1)
         {
             currentLives--;
             transform.position = checkpointManager.GetRespawnPoint();
-            ResetHealth(); 
+            ResetHealth();
             Debug.Log("Respawning... Lives left: " + currentLives);
         }
         else
@@ -41,7 +50,7 @@ public class PlayerController : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("Game Over");
-        gameOverManager.ShowGameOver(); 
+        gameOverManager.ShowGameOver();
     }
 
     private void TakeDamage(int damage)
@@ -62,7 +71,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Hazard"))
         {
-            TakeDamage(2); 
+            TakeDamage(2);
         }
         // else if (other.CompareTag("Obstacle"))
         // {
@@ -72,9 +81,19 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.y < -10) 
+        if (transform.position.y < -10)
         {
             Respawn();
         }
+
+        foreach (Image img in hearts)
+        {
+            img.sprite = emptyHeart;
+        }
+        for (int i = 0; i < currentLives; i++)
+        {
+            hearts[i].sprite = fullHeart;
+        }
+
     }
 }
