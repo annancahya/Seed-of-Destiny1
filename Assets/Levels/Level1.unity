@@ -5291,7 +5291,7 @@ MonoBehaviour:
   - {fileID: 265695140}
   - {fileID: 2046179111}
   fullHeart: {fileID: 21300000, guid: 9f7bbf33ff9631441b2641e53798a69a, type: 3}
-  emptyHeart: {fileID: 21300000, guid: ef4ad7c2c79292e40afaac830fe93923, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 3fab67fb09ed5514a90c1bf57b2d0fde, type: 3}
   isDead: 0
 --- !u!1 &694667758
 GameObject:

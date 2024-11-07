@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (healthManager.isDead)
         {
-            return; // Skip the rest of the update if the player is dead
+            return; 
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
@@ -68,10 +68,9 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("Jump");
             audioManager.PlaySFX(audioManager.jump);
 
-            // Increment jump counter if not grounded
             if (!isGrounded())
             {
-                jumpCounter++; // Increment for additional jump
+                jumpCounter++;
             }
         }
     }

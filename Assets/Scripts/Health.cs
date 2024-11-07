@@ -25,6 +25,7 @@ public class HealthManager : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         ResetHealth();
         currentLives = maxLives;
+        isDead = false;
     }
 
     private void ResetHealth()

@@ -875,7 +875,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -895,11 +901,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: e0537315-9aa2-42b3-9eae-f92a35f4c623
+  cloudProjectId: ee25bc50-9b48-4d2d-a7ab-7dc511239430
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Seed of Destiny
-  organizationId: annancahya9h09
+  organizationId: muhammadfadila640
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
