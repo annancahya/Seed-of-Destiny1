@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI; // Untuk menggunakan UI seperti Text
+using UnityEngine.UI; // Untuk menggunakan UI seperti Image
 
 public class NPCInteraction : MonoBehaviour
 {
     public GameObject interactionUI; // UI yang menunjukkan "Tekan E"
-    public TextMeshProUGUI dialogueText; // TMP untuk dialog NPC
-    public string[] npcDialogues; // Array berisi dialog NPC
+    public Image dialogueImage; // Komponen Image untuk dialog NPC
+    public Sprite[] npcDialogues; // Array berisi gambar dialog NPC
     public Transform dialoguePosition; // Posisi di atas kepala NPC untuk menampilkan dialog
 
     private bool isPlayerInRange = false;
@@ -18,7 +17,7 @@ public class NPCInteraction : MonoBehaviour
     {
         // Pastikan UI interaksi dan dialog tidak terlihat pada awalnya
         interactionUI.SetActive(false);
-        dialogueText.gameObject.SetActive(false);
+        dialogueImage.gameObject.SetActive(false);
     }
 
     void Update()
@@ -33,9 +32,9 @@ public class NPCInteraction : MonoBehaviour
 
     void ShowDialogue()
     {
-        // Aktifkan teks dialog di atas NPC
-        dialogueText.gameObject.SetActive(true);
-        dialogueText.text = npcDialogues[currentDialogueIndex];
+        // Aktifkan gambar dialog di atas NPC
+        dialogueImage.gameObject.SetActive(true);
+        dialogueImage.sprite = npcDialogues[currentDialogueIndex];
 
         // Meningkatkan indeks dialog (loop kembali ke awal jika sudah di akhir)
         currentDialogueIndex = (currentDialogueIndex + 1) % npcDialogues.Length;
@@ -46,7 +45,7 @@ public class NPCInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isPlayerInRange = true; 
+            isPlayerInRange = true;
             interactionUI.SetActive(true); // Tampilkan teks "Tekan E"
         }
     }
@@ -58,7 +57,7 @@ public class NPCInteraction : MonoBehaviour
         {
             isPlayerInRange = false;
             interactionUI.SetActive(false); // Sembunyikan teks "Tekan E"
-            dialogueText.gameObject.SetActive(false); // Sembunyikan dialog ketika keluar dari jangkauan
+            dialogueImage.gameObject.SetActive(false); // Sembunyikan dialog ketika keluar dari jangkauan
         }
     }
 }
