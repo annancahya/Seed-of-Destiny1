@@ -90,11 +90,6 @@ public class HealthManager : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.y < -10)
-        {
-            Respawn();
-        }
-
         foreach (Image img in hearts)
         {
             img.sprite = emptyHeart;

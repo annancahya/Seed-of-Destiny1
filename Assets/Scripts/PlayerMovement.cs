@@ -3,18 +3,24 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] float speed;
-    [SerializeField] float jumpPower;
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpPower;
     [SerializeField] private int extraJumps;
+    [SerializeField] private float dashSpeed = 15f;
+    [SerializeField] private float dashDuration;
+    [SerializeField] private float dashCooldown;
+
     private int jumpCounter;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
     private HealthManager healthManager;
     private float horizontalInput;
+    private bool isDashing = false;
+    private float dashEndTime;
+    private float lastDashTime;
 
-    AudioManager audioManager;
-
+    private AudioManager audioManager;
 
     private void Awake()
     {
@@ -23,9 +29,6 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-
-        // Prevent rotation from physics
-        body.freezeRotation = true;
     }
 
     private void Update()
@@ -47,8 +50,10 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("Run", horizontalInput != 0);
         anim.SetBool("Grounded", isGrounded());
 
-        // Movement logic
-        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        if (!isDashing)
+        {
+            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        }
 
         if (isGrounded())
         {
@@ -58,6 +63,28 @@ public class PlayerMovement : MonoBehaviour
         // Jump logic
         if (Input.GetKeyDown(KeyCode.Space))
             Jump();
+
+        // Dash input and logic
+        if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash())
+        {
+            StartDash();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            // Keep dashing for the duration
+            body.velocity = new Vector2(horizontalInput * dashSpeed, body.velocity.y);
+
+            // End dash after duration
+            if (Time.time >= dashEndTime)
+            {
+                isDashing = false;
+                body.velocity = new Vector2(horizontalInput * speed, body.velocity.y); // Resume normal speed
+            }
+        }
     }
 
     private void Jump()
@@ -81,10 +108,21 @@ public class PlayerMovement : MonoBehaviour
         return raycastHit.collider != null;
     }
 
+    private bool CanDash()
+    {
+        return Time.time >= lastDashTime + dashCooldown;
+    }
+
+    private void StartDash()
+    {
+        isDashing = true;
+        dashEndTime = Time.time + dashDuration;
+        lastDashTime = Time.time;
+        // Optional: play dash sound effect or add visual feedback
+    }
+
     public void PlayStep()
     {
         audioManager.PlaySFX(audioManager.steps);
-
     }
-
 }

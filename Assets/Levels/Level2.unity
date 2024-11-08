@@ -4146,6 +4146,9 @@ MonoBehaviour:
   speed: 5
   jumpPower: 10
   extraJumps: 1
+  dashSpeed: 15
+  dashDuration: 0.2
+  dashCooldown: 1
 --- !u!50 &757298847
 Rigidbody2D:
   serializedVersion: 4
@@ -4172,7 +4175,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &757298848
 BoxCollider2D:
   m_ObjectHideFlags: 0
