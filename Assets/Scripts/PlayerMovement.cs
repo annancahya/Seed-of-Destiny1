@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         // Set animator parameters
         anim.SetBool("Run", horizontalInput != 0);
         anim.SetBool("Grounded", isGrounded());
+        anim.SetBool("Dashing", isDashing);
 
         if (!isDashing)
         {
@@ -118,6 +119,8 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
         dashEndTime = Time.time + dashDuration;
         lastDashTime = Time.time;
+        anim.SetTrigger("Dash");
+
         // Optional: play dash sound effect or add visual feedback
     }
 
