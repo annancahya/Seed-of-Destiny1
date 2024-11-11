@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
+    AudioManager audioManager;
     private CheckpointManager checkpointManager;
     private GameOverManager gameOverManager;
     public int maxHealth = 2;
@@ -18,17 +19,22 @@ public class HealthManager : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public bool isDead = false;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
+    }
     private void Start()
     {
         gameOverManager = FindObjectOfType<GameOverManager>();
         checkpointManager = FindObjectOfType<CheckpointManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+
         ResetHealth();
 
         // Load lives from GameManager if available
         currentLives = GameManager.instance != null ? GameManager.instance.playerLives : maxLives;
-        
+
         isDead = false;
     }
 
@@ -62,7 +68,9 @@ public class HealthManager : MonoBehaviour
         ResetHealth();
         spriteRenderer.enabled = true;
         isDead = false;
+        audioManager.PlaySFX(audioManager.respawn);
         Debug.Log("Respawning... Lives left: " + currentLives);
+
     }
 
     private void GameOver()
@@ -78,6 +86,7 @@ public class HealthManager : MonoBehaviour
         if (currentHealth <= 0)
         {
             Respawn();
+
         }
         else
         {
@@ -90,6 +99,7 @@ public class HealthManager : MonoBehaviour
         if (other.CompareTag("Hazard"))
         {
             TakeDamage(2);
+            audioManager.PlaySFX(audioManager.die);
         }
     }
 

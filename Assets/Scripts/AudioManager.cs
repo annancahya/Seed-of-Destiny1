@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip jump;
     public AudioClip steps;
     public AudioClip checkpoint;
+    public AudioClip die;
+    public AudioClip respawn;
 
     private void Start()
     {

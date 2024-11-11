@@ -15794,6 +15794,8 @@ MonoBehaviour:
   jump: {fileID: 8300000, guid: 96b1f3bc94b6e7e468f44c2b290bff6e, type: 3}
   steps: {fileID: 8300000, guid: f0a7135462e8892459c330dbd265f60d, type: 3}
   checkpoint: {fileID: 8300000, guid: 781c63f9db3dfa14682f8381b8c6ed0e, type: 3}
+  die: {fileID: 8300000, guid: 7f1702fa55e504e4abf5d1c7c7514c08, type: 3}
+  respawn: {fileID: 8300000, guid: a0fc0ba586650b849bafd0a50ccc5fa5, type: 3}
 --- !u!4 &2014677734
 Transform:
   m_ObjectHideFlags: 0
