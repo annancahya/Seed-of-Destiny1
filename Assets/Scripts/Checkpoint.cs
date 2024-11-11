@@ -9,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !isActivated)
@@ -17,7 +18,6 @@ public class Checkpoint : MonoBehaviour
             CheckpointManager manager = FindObjectOfType<CheckpointManager>();
             manager.SetCheckpoint(transform);
             audioManager.PlaySFX(audioManager.checkpoint);
-
         }
     }
 }

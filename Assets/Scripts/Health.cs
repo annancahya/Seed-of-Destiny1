@@ -23,8 +23,12 @@ public class HealthManager : MonoBehaviour
         gameOverManager = FindObjectOfType<GameOverManager>();
         checkpointManager = FindObjectOfType<CheckpointManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
         ResetHealth();
-        currentLives = maxLives;
+
+        // Load lives from GameManager if available
+        currentLives = GameManager.instance != null ? GameManager.instance.playerLives : maxLives;
+        
         isDead = false;
     }
 
@@ -38,6 +42,7 @@ public class HealthManager : MonoBehaviour
         if (currentLives > 1)
         {
             currentLives--;
+            UpdateLivesInGameManager();
             StartCoroutine(RespawnWithDelay(1f));
         }
         else
@@ -97,6 +102,15 @@ public class HealthManager : MonoBehaviour
         for (int i = 0; i < currentLives; i++)
         {
             hearts[i].sprite = fullHeart;
+        }
+    }
+
+    private void UpdateLivesInGameManager()
+    {
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.playerLives = currentLives;
+            GameManager.instance.SaveGame();
         }
     }
 }
