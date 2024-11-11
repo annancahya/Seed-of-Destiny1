@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
         if (currentLevel < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(currentLevel);
+            playerPosition = Vector3.zero;
         }
         else
         {

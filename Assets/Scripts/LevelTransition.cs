@@ -3,13 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelTransition : MonoBehaviour
 {
-    public string nextLevel; // Assign the name of the next level in the Inspector
-
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D next)
     {
-        if (other.CompareTag("Player")) // Ensure the Player has the tag "Player"
+        if (next.CompareTag("Player"))
         {
-            SceneManager.LoadScene(nextLevel); // Load the next level
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GameManager.instance.ProgressToNextLevel();
         }
     }
 }

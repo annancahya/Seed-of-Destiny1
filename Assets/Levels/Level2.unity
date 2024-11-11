@@ -6779,7 +6779,7 @@ Transform:
   m_GameObject: {fileID: 757298842}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0032755262, y: -0, z: -0, w: 0.99999464}
-  m_LocalPosition: {x: 49.36, y: -0.16, z: -0.01}
+  m_LocalPosition: {x: -5.91, y: -0.88, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8908,6 +8908,8 @@ MonoBehaviour:
   jump: {fileID: 8300000, guid: 96b1f3bc94b6e7e468f44c2b290bff6e, type: 3}
   steps: {fileID: 8300000, guid: f0a7135462e8892459c330dbd265f60d, type: 3}
   checkpoint: {fileID: 8300000, guid: 781c63f9db3dfa14682f8381b8c6ed0e, type: 3}
+  die: {fileID: 0}
+  respawn: {fileID: 0}
 --- !u!4 &1009618116
 Transform:
   m_ObjectHideFlags: 0
