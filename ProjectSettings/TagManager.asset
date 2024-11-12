@@ -8,6 +8,7 @@ TagManager:
   - Hazard
   - platform
   - Audio
+  - Mushroom
   layers:
   - Default
   - TransparentFX
