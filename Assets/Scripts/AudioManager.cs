@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip background;
     public AudioClip jump;
     public AudioClip steps;
+    public AudioClip dash;
     public AudioClip checkpoint;
     public AudioClip die;
     public AudioClip respawn;

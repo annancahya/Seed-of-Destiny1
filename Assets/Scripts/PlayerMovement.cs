@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (healthManager.isDead)
         {
-            return; 
+            return;
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
@@ -120,8 +120,7 @@ public class PlayerMovement : MonoBehaviour
         dashEndTime = Time.time + dashDuration;
         lastDashTime = Time.time;
         anim.SetTrigger("Dash");
-
-        // Optional: play dash sound effect or add visual feedback
+        audioManager.PlaySFX(audioManager.dash);
     }
 
     public void PlayStep()
