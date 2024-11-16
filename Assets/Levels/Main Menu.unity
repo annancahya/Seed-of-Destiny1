@@ -858,7 +858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 83.501, y: 481.24}
+  m_AnchoredPosition: {x: 200, y: 403}
   m_SizeDelta: {x: 127.0021, y: 77.5253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505552982
@@ -1464,9 +1464,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1514480249}
   SFXSource: {fileID: 197080303}
+  ambientSource: {fileID: 0}
   background: {fileID: 8300000, guid: a59d97a831a2a7c4eac123a33726ffd5, type: 3}
+  ambient: {fileID: 0}
   jump: {fileID: 0}
   steps: {fileID: 0}
+  dash: {fileID: 0}
   checkpoint: {fileID: 0}
   die: {fileID: 0}
   respawn: {fileID: 0}
@@ -2586,7 +2589,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b002db17b99a55e4ba0155a285abf8e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71592624e32442c4f925bc614f0de94d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3074,8 +3077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 905, y: 485}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchoredPosition: {x: 832.9, y: 411.86}
+  m_SizeDelta: {x: 67.4943, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1930072483
 MonoBehaviour:
