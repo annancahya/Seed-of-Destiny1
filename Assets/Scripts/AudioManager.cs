@@ -5,8 +5,10 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioSource ambientSource;
 
     public AudioClip background;
+    public AudioClip ambient;
     public AudioClip jump;
     public AudioClip steps;
     public AudioClip dash;
@@ -20,9 +22,22 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
+    public void PlayAmbient(AudioClip clip)
+    {
+        ambientSource.PlayOneShot(clip);
+    }
+
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
+    }
+
+    public void StopAmbient(AudioClip clip)
+    {
+        if (ambientSource.isPlaying)
+        {
+            ambientSource.Stop();
+        }
     }
 
 
