@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("No saved game data found. Starting new game.");
-            SceneManager.LoadScene(0);
+            StartNewGame();
         }
     }
 

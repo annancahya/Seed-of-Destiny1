@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public GameObject confirmationCanvas;
+
     public void OnLoadButtonClicked()
     {
         if (GameManager.instance != null)
@@ -11,6 +14,22 @@ public class MainMenu : MonoBehaviour
     }
 
     public void OnStartButtonClicked()
+    {
+        SaveData data = SaveSystem.LoadGame();
+        if (data != null)
+        {
+            if (confirmationCanvas != null)
+            {
+                confirmationCanvas.SetActive(true);
+            }
+        }
+        else
+        {
+            GameManager.instance.StartNewGame();
+        }
+    }
+
+    public void StartGame()
     {
         if (GameManager.instance != null)
         {
