@@ -1,9 +1,24 @@
+using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-
     public GameObject confirmationCanvas;
+    public TextMeshProUGUI textMeshProUGUI;
+
+    public void Start()
+    {
+        SaveData data = SaveSystem.LoadGame();
+        if (data != null)
+        {
+            textMeshProUGUI.text = "NEW GAME";
+        }
+        else
+        {
+            textMeshProUGUI.text = "START GAME";
+        }
+    }
 
     public void OnLoadButtonClicked()
     {
