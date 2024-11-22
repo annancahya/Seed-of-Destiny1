@@ -10289,8 +10289,7 @@ MonoBehaviour:
   - Halo Ardhana, kamu pergi kemana tadi?
   - Tadi ada seseorang mencari kamu, tapi dia sudah pergi
   - Kamu menemukan petunjuk the last seed?
-  - Coba kamu pergi ke hutan sebelah, seharusnya di sana ada patung yg akan memberikan
-    kamu petunjuk
+  - Coba kamu pergi ke hutan, seharusnya ada patung yg akan memberikan petunjuk
   writingSpeed: 0
 --- !u!1 &1323277075
 GameObject:
@@ -17092,9 +17091,81 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1418600837837743436, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418600837837743436, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418600837837743436, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9846534
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418600837837743436, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159623436667919712, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1371809
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159623436667919712, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1371809
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159623436667919712, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1371809
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159623436667919712, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159623436667919712, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460579982570270349, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72bbc665c5e5961499b00eab2cad4f39, type: 3}
     - target: {fileID: 4805032358851340337, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
       propertyPath: m_Name
       value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255166744710910061, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e991bbc4e5d8d3041a88c93ebcd6646c, type: 3}
+    - target: {fileID: 8368874683607312362, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_margin.w
+      value: 1.939927
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368874683607312362, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_margin.y
+      value: 1.96512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368874683607312362, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_marginHeight
+      value: 1.0949531
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368874683607312362, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_isPreferredWidthDirty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368874683607312362, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_AutoSizeIterationCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368874683607312362, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_isPreferredHeightDirty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368874683607312362, guid: 5c79ce6a8a5b2f04da32c43f821ef92c, type: 3}
+      propertyPath: m_lineVisibleCharacterCount
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
