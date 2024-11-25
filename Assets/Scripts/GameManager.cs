@@ -102,6 +102,5 @@ public class GameManager : MonoBehaviour
     {
         playerLives = 3;
         playerPosition = Vector3.zero;
-        currentLevel = 0;
     }
 }
