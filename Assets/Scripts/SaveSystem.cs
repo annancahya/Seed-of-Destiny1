@@ -24,5 +24,6 @@ public class SaveSystem : MonoBehaviour {
 
     public static void DeleteSave() {
         PlayerPrefs.DeleteKey("SaveData");
+        Debug.Log("Save Erased");
     }
 }
