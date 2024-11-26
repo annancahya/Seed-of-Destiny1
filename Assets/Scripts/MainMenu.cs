@@ -5,6 +5,8 @@ using TMPro;
 public class MainMenu : MonoBehaviour
 {
     public GameObject confirmationCanvas;
+
+    public GameObject quitg;
     public TextMeshProUGUI textMeshProUGUI;
 
     public void Start()
@@ -17,6 +19,15 @@ public class MainMenu : MonoBehaviour
         else
         {
             textMeshProUGUI.text = "START GAME";
+        }
+
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            quitg.gameObject.SetActive(true);
         }
     }
 
