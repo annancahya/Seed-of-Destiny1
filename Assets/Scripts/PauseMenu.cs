@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuUI;
+    public GameObject SettingUI;
 
     private bool isPaused = false;
 
@@ -11,7 +13,11 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (isPaused && SettingUI.activeInHierarchy)
+            {
+                CloseSetting();
+            }
+            else if (isPaused && !SettingUI.activeInHierarchy)
             {
                 Resume();
             }
@@ -34,6 +40,16 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+    }
+
+    public void OpenSetting()
+    {
+        SettingUI.SetActive(true);
+    }
+
+    public void CloseSetting()
+    {
+        SettingUI.SetActive(false);
     }
 
     public void QuitToMainMenu()
