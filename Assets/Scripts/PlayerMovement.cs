@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     private HealthManager healthManager;
     private float horizontalInput;
+
+    private float dash;
     private bool isDashing = false;
     private float dashEndTime;
     private float lastDashTime;
@@ -39,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
+        dash = Input.GetAxis("Dash");
 
         // Flip player when moving right & left
         if (horizontalInput > 0.01f)
@@ -66,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
 
         // Dash input and logic
-        if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash())
+        if (dash > 0 && CanDash())
         {
             StartDash();
         }
