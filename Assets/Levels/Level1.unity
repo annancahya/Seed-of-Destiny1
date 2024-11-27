@@ -315,7 +315,7 @@ Transform:
   m_GameObject: {fileID: 16392146}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.027637, y: -0.9801657, z: 0.04282424}
+  m_LocalPosition: {x: 45.02764, y: -0.9801657, z: 0.04282424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5764,7 +5764,7 @@ GameObject:
   - component: {fileID: 645792249}
   - component: {fileID: 645792248}
   m_Layer: 5
-  m_Name: Interact
+  m_Name: Walk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5786,8 +5786,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -922, y: -540}
-  m_SizeDelta: {x: 12.6, y: 2.74}
+  m_AnchoredPosition: {x: -961.7, y: -540}
+  m_SizeDelta: {x: 8.1, y: 2.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645792248
 MonoBehaviour:
@@ -5809,7 +5809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To interact with an NPC, press E when near them
+  m_text: Use the A and D keys to walk
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbda859a8d61e924288154cb0eac2f48, type: 2}
   m_sharedMaterial: {fileID: -8212265359198931286, guid: bbda859a8d61e924288154cb0eac2f48, type: 2}
@@ -6205,7 +6205,7 @@ Transform:
   m_GameObject: {fileID: 659559241}
   serializedVersion: 2
   m_LocalRotation: {x: 0.003275526, y: -0, z: -0, w: 0.9999946}
-  m_LocalPosition: {x: 42.62, y: -0.03, z: 0}
+  m_LocalPosition: {x: -6.3, y: -0.03, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -16713,7 +16713,7 @@ Transform:
   m_GameObject: {fileID: 2014677732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7112885, y: 2.0819147, z: -0.06474788}
+  m_LocalPosition: {x: -1.711288, y: 2.081915, z: -0.06474788}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16734,7 +16734,7 @@ GameObject:
   - component: {fileID: 2035924520}
   - component: {fileID: 2035924519}
   m_Layer: 5
-  m_Name: Interact (1)
+  m_Name: Walk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16792,7 +16792,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -923.3, y: -540}
+  m_Offset: {x: -964.2, y: -540}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
